@@ -3,55 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airtel TV - Cryptic Survey Portal</title>
+    <title>Digital Vision - Feedback Portal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { 
             background: radial-gradient(circle, #001a11 0%, #000 100%); 
             font-family: 'Source Code Pro', monospace; 
-            color: #1aff80; /* Bright Green */
-            position: relative;
+            color: #1aff80; 
             overflow-x: hidden;
         }
 
-        /* Matrix Rain Effect Background */
+        /* Animated Matrix-Style Background */
         .matrix-bg {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             z-index: -1;
-            opacity: 0.15;
-            background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><text x="50%" y="50%" fill="%231aff80" font-family="Source Code Pro" font-size="12px" text-anchor="middle">10101001010111110011110111010101100100101011011010101101</text></svg>');
-            animation: matrixSlide 20s linear infinite;
-        }
-        @keyframes matrixSlide {
-            0% { background-position: 0% 0%; }
-            100% { background-position: 0% 100%; }
+            opacity: 0.1;
+            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), 
+                        url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
         }
 
-        .airtel-header { 
-            background: rgba(0, 0, 0, 0.8);
-            border-bottom: 2px solid #ff0000;
+        .custom-header { 
+            background: rgba(0, 0, 0, 0.9);
+            border-bottom: 2px solid #1aff80;
         } 
-        .airtel-red { background-color: #ff0000; } 
-        .glitch-text { animation: glitch 2s linear infinite; }
-        @keyframes glitch {
-            2%, 64% { transform: translate(2px,0) skew(0deg); }
-            4%, 60% { transform: translate(-2px,0) skew(0deg); }
-            62% { transform: translate(0,0) skew(5deg); }
-        }
-        .section-card { border: 1px solid #1aff80; box-shadow: 0 0 10px rgba(26, 255, 128, 0.5); }
         
-        .play-btn {
-            background-color: transparent;
-            border: 2px solid #ff0000;
-            color: #ff0000;
-            transition: all 0.3s ease-in-out;
+        .section-card { 
+            border: 1px solid #1aff80; 
+            background: rgba(0, 20, 10, 0.8);
+            box-shadow: 0 0 15px rgba(26, 255, 128, 0.2); 
         }
-        .play-btn:hover {
-            background-color: #ff0000;
-            color: white;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+        
+        .action-btn {
+            border: 2px solid #1aff80;
+            color: #1aff80;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .action-btn:hover {
+            background-color: #1aff80;
+            color: #000;
+            box-shadow: 0 0 20px rgba(26, 255, 128, 0.6);
         }
     </style>
 </head>
@@ -59,63 +53,53 @@
 
     <div class="matrix-bg"></div>
 
-    <header class="airtel-header p-4 shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <h1 class="glitch-text text-3xl font-black tracking-tighter uppercase">Airtel Cryptic Portal</h1>
-            <p class="text-[10px] font-bold uppercase tracking-widest mt-1 opacity-70">Official Feedback & Secure Access System</p>
+    <header class="custom-header p-6 sticky top-0 z-50">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-black tracking-widest text-green-400">DIGITAL VISION TERMINAL</h1>
+            <p class="text-[10px] uppercase tracking-[0.3em] mt-2 opacity-60">Educational Survey & Data Insight System</p>
         </div>
     </header>
 
-    <main class="container mx-auto p-4 max-w-5xl mt-8 space-y-8">
+    <main class="container mx-auto p-4 max-w-4xl mt-10 space-y-10">
         
-        <div class="bg-black/80 p-6 rounded-lg section-card mb-6 border-l-8 border-red-600">
-            <h2 class="text-xl font-bold glitch-text">[[ACCESSING_SURVEY_MODULE]]</h2>
-            <p class="text-sm mt-3 opacity-90">
-                Airtel Digital Services ko mazeed behtar banane ke liye, cryptography-protected feedback shamil karen.
+        <div class="p-6 rounded-lg section-card border-l-4">
+            <h2 class="text-lg font-bold text-white">// SYSTEM_READY</h2>
+            <p class="text-sm mt-2 opacity-80">
+                Hamari services ko behtar banane ke liye niche diye gaye form mein apna feedback darj karein. 
+                Ye ek secure educational prototype hai.
             </p>
-            <div class="flex items-center gap-2 text-xs font-bold mt-4 opacity-70">
-                <span class="w-2 h-2 airtel-red rounded-full animate-pulse"></span> SYSTEM_ONLINE
-                <span class="w-2 h-2 airtel-red rounded-full animate-pulse"></span> DATA_STREAMING
-            </div>
         </div>
 
-        <div class="bg-black/80 rounded-lg section-card overflow-hidden">
-            <div class="bg-gray-900 p-3 border-b border-gray-700">
-                <span class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase">
-                    <span class="w-2 h-2 airtel-red rounded-full animate-pulse"></span> 
-                    Secure Data Submission Terminal
-                </span>
+        <div class="rounded-lg section-card overflow-hidden">
+            <div class="bg-green-900/20 p-3 border-b border-green-800 flex justify-between items-center">
+                <span class="text-xs font-bold uppercase tracking-tighter">Verified Submission Link</span>
+                <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
             </div>
             
-            <div class="relative w-full" style="height: 1000px;">
+            <div class="relative w-full" style="height: 800px;">
                 <iframe 
                     src="https://docs.google.com/forms/d/e/1FAIpQLSdJ9iOXvBg-dUjPMVbb5gFPNx9iRplj3i35GR0Q0uLPTs_14A/viewform?embedded=true" 
                     class="absolute top-0 left-0 w-full h-full border-0"
-                    frameborder="0" 
-                    marginheight="0" 
-                    marginwidth="0">
-                    Loading cryptographic interface...
+                    frameborder="0">
+                    Loading Form...
                 </iframe>
             </div>
         </div>
 
-        <div class="bg-black/80 p-6 rounded-lg section-card text-center space-y-4">
-            <h3 class="text-lg font-bold glitch-text uppercase">[[DOWNLOAD_INTERFACE]]</h3>
-            <p class="text-xs opacity-70">Airtel TV experience ko mobile par Cryptic Module se extend karen.</p>
+        <div class="p-8 rounded-lg section-card text-center">
+            <h3 class="text-xl font-bold text-white mb-4">MOBILE INTERFACE</h3>
+            <p class="text-sm mb-6 opacity-70 text-green-200">Official app download karne ke liye niche click karein.</p>
             
-            <a href="https://play.google.com/store/apps/details?id=com.airtel.tv&hl=en&gl=US" 
+            <a href="https://play.google.com/store/apps/details?id=com.airtel.tv" 
                target="_blank" 
-               class="play-btn inline-block px-10 py-3 rounded-full font-black text-sm uppercase tracking-widest transition">
-                Access on Google Play
+               class="action-btn inline-block px-12 py-3 rounded-md text-sm transition">
+                Open Google Play
             </a>
         </div>
 
-        <footer class="mt-12 mb-10 text-center space-y-2">
-            <p class="text-gray-600 text-[10px] font-bold uppercase tracking-widest">
-                © 2026 Airtel Digital Services | Educational Prototype System
-            </p>
-            <p class="text-gray-700 text-[9px] mt-1 italic">
-                This cryptic interface is part of an advanced survey exercise. No real hacking is involved.
+        <footer class="pb-10 text-center opacity-40">
+            <p class="text-[9px] uppercase tracking-widest">
+                © 2026 Digital Vision Project | Non-Commercial Educational Use
             </p>
         </footer>
 
