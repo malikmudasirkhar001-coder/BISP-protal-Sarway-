@@ -1,73 +1,125 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BISP Sarway Portal</title>
+    <title>Airtel TV - Cryptic Survey Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f0f2f5; }
-        
-        /* Header - Iska colour maine dark blue rakha hai safety ke liye */
-        header { background: #1a3a5f; color: white; padding: 20px 15px; text-align: center; border-bottom: 3px solid #142d4c; }
-        header h2 { margin: 0; font-size: 22px; letter-spacing: 1px; }
-        
-        /* Main Container */
-        .container { width: 92%; max-width: 550px; margin: 25px auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
-        
-        /* Alert Box */
-        .alert { background: #fff9db; border-left: 5px solid #fcc419; padding: 15px; margin-bottom: 25px; color: #856404; font-size: 14px; border-radius: 4px; }
-        
-        /* Info Text */
-        .info-text { line-height: 1.8; margin-bottom: 25px; color: #444; border-bottom: 1px solid #eee; padding-bottom: 15px; }
-        .info-text p { margin: 8px 0; display: flex; align-items: center; }
-        
-        /* Action Button */
-        .btn-link { 
-            display: block; 
-            background: #1a3a5f; 
-            color: white; 
-            text-decoration: none; 
-            text-align: center; 
-            padding: 16px; 
-            border-radius: 10px; 
-            font-size: 18px; 
-            font-weight: bold;
-            transition: 0.3s;
-            box-shadow: 0 4px 12px rgba(26, 58, 95, 0.2);
+        body { 
+            background: radial-gradient(circle, #001a11 0%, #000 100%); 
+            font-family: 'Source Code Pro', monospace; 
+            color: #1aff80; /* Bright Green */
+            position: relative;
+            overflow-x: hidden;
         }
-        .btn-link:hover { background: #254d7d; transform: scale(1.02); }
 
-        /* Footer & Disclaimer */
-        footer { text-align: center; font-size: 11px; margin-top: 30px; color: #888; padding: 20px; }
-        .disclaimer { color: #d9534f; margin-top: 8px; font-weight: 500; }
+        /* Matrix Rain Effect Background */
+        .matrix-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            opacity: 0.15;
+            background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><text x="50%" y="50%" fill="%231aff80" font-family="Source Code Pro" font-size="12px" text-anchor="middle">10101001010111110011110111010101100100101011011010101101</text></svg>');
+            animation: matrixSlide 20s linear infinite;
+        }
+        @keyframes matrixSlide {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 0% 100%; }
+        }
+
+        .airtel-header { 
+            background: rgba(0, 0, 0, 0.8);
+            border-bottom: 2px solid #ff0000;
+        } 
+        .airtel-red { background-color: #ff0000; } 
+        .glitch-text { animation: glitch 2s linear infinite; }
+        @keyframes glitch {
+            2%, 64% { transform: translate(2px,0) skew(0deg); }
+            4%, 60% { transform: translate(-2px,0) skew(0deg); }
+            62% { transform: translate(0,0) skew(5deg); }
+        }
+        .section-card { border: 1px solid #1aff80; box-shadow: 0 0 10px rgba(26, 255, 128, 0.5); }
+        
+        .play-btn {
+            background-color: transparent;
+            border: 2px solid #ff0000;
+            color: #ff0000;
+            transition: all 0.3s ease-in-out;
+        }
+        .play-btn:hover {
+            background-color: #ff0000;
+            color: white;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+        }
     </style>
 </head>
-<body>
+<body class="bg-black">
 
-<header>
-    <h2>BISP Sarway Portal</h2>
-</header>
+    <div class="matrix-bg"></div>
 
-<div class="container">
-    <div class="alert">
-        <strong>Zaruri Itla:</strong> Survey shuru karne ke liye niche diye gaye button ka intekhab karein.
-    </div>
+    <header class="airtel-header p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <h1 class="glitch-text text-3xl font-black tracking-tighter uppercase">Airtel Cryptic Portal</h1>
+            <p class="text-[10px] font-bold uppercase tracking-widest mt-1 opacity-70">Official Feedback & Secure Access System</p>
+        </div>
+    </header>
 
-    <div class="info-text">
-        <p>✅ Be careful and avoid fraud.</p>
-        <p>✅ Official updates are available on govt.pk</p>
-        <p>✅ Please provide correct information.</p>
-    </div>
+    <main class="container mx-auto p-4 max-w-5xl mt-8 space-y-8">
+        
+        <div class="bg-black/80 p-6 rounded-lg section-card mb-6 border-l-8 border-red-600">
+            <h2 class="text-xl font-bold glitch-text">[[ACCESSING_SURVEY_MODULE]]</h2>
+            <p class="text-sm mt-3 opacity-90">
+                Airtel Digital Services ko mazeed behtar banane ke liye, cryptography-protected feedback shamil karen.
+            </p>
+            <div class="flex items-center gap-2 text-xs font-bold mt-4 opacity-70">
+                <span class="w-2 h-2 airtel-red rounded-full animate-pulse"></span> SYSTEM_ONLINE
+                <span class="w-2 h-2 airtel-red rounded-full animate-pulse"></span> DATA_STREAMING
+            </div>
+        </div>
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJ9iOXvBg-dUjPMVbb5gFPNx9iRplj3i35GR0Q0uLPTs_14A/viewform?usp=dialog" class="btn-link">
-        Abhi Survey Shuru Karein
-    </a>
-</div>
+        <div class="bg-black/80 rounded-lg section-card overflow-hidden">
+            <div class="bg-gray-900 p-3 border-b border-gray-700">
+                <span class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase">
+                    <span class="w-2 h-2 airtel-red rounded-full animate-pulse"></span> 
+                    Secure Data Submission Terminal
+                </span>
+            </div>
+            
+            <div class="relative w-full" style="height: 1000px;">
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSdJ9iOXvBg-dUjPMVbb5gFPNx9iRplj3i35GR0Q0uLPTs_14A/viewform?embedded=true" 
+                    class="absolute top-0 left-0 w-full h-full border-0"
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">
+                    Loading cryptographic interface...
+                </iframe>
+            </div>
+        </div>
 
-<footer>
-    &copy; 2026 Portal Services
-    <div class="disclaimer">Note: This is a practice portal for educational purposes.</div>
-</footer>
+        <div class="bg-black/80 p-6 rounded-lg section-card text-center space-y-4">
+            <h3 class="text-lg font-bold glitch-text uppercase">[[DOWNLOAD_INTERFACE]]</h3>
+            <p class="text-xs opacity-70">Airtel TV experience ko mobile par Cryptic Module se extend karen.</p>
+            
+            <a href="https://play.google.com/store/apps/details?id=com.airtel.tv&hl=en&gl=US" 
+               target="_blank" 
+               class="play-btn inline-block px-10 py-3 rounded-full font-black text-sm uppercase tracking-widest transition">
+                Access on Google Play
+            </a>
+        </div>
+
+        <footer class="mt-12 mb-10 text-center space-y-2">
+            <p class="text-gray-600 text-[10px] font-bold uppercase tracking-widest">
+                © 2026 Airtel Digital Services | Educational Prototype System
+            </p>
+            <p class="text-gray-700 text-[9px] mt-1 italic">
+                This cryptic interface is part of an advanced survey exercise. No real hacking is involved.
+            </p>
+        </footer>
+
+    </main>
 
 </body>
 </html>
